@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-
-const pass = 'acer8551';
-const URI = `mongodb+srv://systemAdmin:${pass}@cluster0.fivsy0t.mongodb.net/?retryWrites=true&w=majority`;
+require('dotenv').config();
+const URI = process.env.MONGO_URL;
 
 mongoose.connect(URI,{
     useNewUrlParser: true,
