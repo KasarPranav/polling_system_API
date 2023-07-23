@@ -82,7 +82,7 @@ module.exports.getQuestionDetails = async function(req,res){
                         "text": 1,
                         "question": 1,
                         "votes": 1,
-                        "linkToVote": { $concat:[`http://${req.headers.host}/api/questions/options/add-vote?oId=`,{ $toString:'$optionsDetails._id'}]}
+                        "linkToVote": { $concat:[`${process.env.HOSTNAME}api/v1/questions/options/add-vote?oId=`,{ $toString:'$optionsDetails._id'}]}
                         
                     }                                        
                 }
