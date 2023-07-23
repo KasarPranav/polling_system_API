@@ -1,6 +1,8 @@
 const questionModel = require('../models/questions');
 const optionsModel = require('../models/options');
 const mongoose = require('mongoose');
+
+//Function to create a question
 module.exports.createQuestion = async function(req,res){
     const {title} = req.body;
     try {
@@ -20,6 +22,7 @@ module.exports.createQuestion = async function(req,res){
 
 }
 
+//Function to delete a question
 module.exports.deleteQuestion = async function(req,res){
     try {
         const questionId = req.query.qId;
@@ -47,7 +50,7 @@ module.exports.deleteQuestion = async function(req,res){
     }
 }
 
-
+// Function to get a question and all its options
 module.exports.getQuestionDetails = async function(req,res){
     try {
         const questionId = req.params.id;
@@ -79,7 +82,6 @@ module.exports.getQuestionDetails = async function(req,res){
                         "text": 1,
                         "question": 1,
                         "votes": 1,
-                        // { $concat:[{ $first: "$student.firstName" }," ",{ $first: "$student.lastName" }]},
                         "linkToVote": { $concat:[`http://${req.headers.host}/api/questions/options/add-vote?oId=`,{ $toString:'$optionsDetails._id'}]}
                         
                     }                                        

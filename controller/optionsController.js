@@ -1,5 +1,7 @@
 const optionsModel = require('../models/options');
 const questionModel = require('../models/questions');
+
+//Function to create an options
 module.exports.createOptions = async function(req,res){
         const questionId = req.query.qId;
         const {optionText } = req.body;
@@ -22,6 +24,7 @@ module.exports.createOptions = async function(req,res){
         }        
 }
 
+//Funtion to add vote to an option
 module.exports.voteForOption = async function(req,res){
     try {
         const optionId = req.query.oId;
@@ -39,6 +42,8 @@ module.exports.voteForOption = async function(req,res){
     }
 }
 
+
+//Function to delete an option
 module.exports.deleteOption = async function(req,res){
     try {
         const optionId = req.query.oId;
