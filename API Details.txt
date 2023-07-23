@@ -1,0 +1,27 @@
+1) create a question (POST)
+http://localhost:5000/api/questions/create
+
+Pass data -> "title" = "question title"
+
+
+2) create option for a question (POST)
+http://localhost:5000/api/questions/options/create?qId=64b83751dbb485bf2bcf3271
+
+Pass data ->  "optionText" = "optionValue"
+
+
+3) vote for an option (PATCH)
+http://localhost:5000/api/questions/options/add-vote?oId=64bc067068a3ff6268280cc8
+
+4)delete an option (DELETE)
+http://localhost:5000/api/questions/options/delete?oId=64bc067068a3ff6268280cc8
+
+
+5)delete a question (DELETE)
+http://localhost:5000/api/questions/delete?qId=64b83751dbb485bf2bcf3271
+
+
+6) view a question (GET)
+http://localhost:5000/api/questions/view/:qId
+
+
