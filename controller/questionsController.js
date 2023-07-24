@@ -95,7 +95,8 @@ module.exports.getQuestionDetails = async function(req,res){
             }
 
         ]);
-        if(question){
+        // console.log(question[0]);
+        if(question[0]._id){
             return res.status(200).json({
                 data: question,
                 message: "Success"
