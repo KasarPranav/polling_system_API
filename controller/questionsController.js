@@ -90,6 +90,7 @@ module.exports.getQuestionDetails = async function(req,res){
             {
                 $group: {
                     _id: '$_id',
+                    title: { $first: "$title"},
                     optionsDetails: {$push: "$optionsDetails"}
                 }
             }

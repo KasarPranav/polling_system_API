@@ -20,7 +20,7 @@ module.exports.createOptions = async function(req,res){
             });
         } catch (error) {
             console.log("Error while creating option: ",error);
-            return;
+            return res.status(500);
         }        
 }
 
