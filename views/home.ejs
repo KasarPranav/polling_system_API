@@ -1,0 +1,38 @@
+<div>
+   <h1>System Polling API's</h1>
+   <p>You can access the below API's</p>
+   <ol>
+    <li>
+        <p>Create a question (POST)</p>
+        <p>https://polling-system-3qu8.onrender.com/api/v1/questions/create</p>
+        <p>Send content in url-form-encoded as "title" = "question title"</p>
+    </li>
+    <li>
+        <p>Create option for a question (POST)</p>
+        <p>https://polling-system-3qu8.onrender.com/api/v1/questions/options/create?qId=64b83751dbb485bf2bcf3271</p>
+        <p>Send content in url-form-encoded as "optionText" = "optionValue", <i>"qId"</i> corresponds to question Id in above url, Please pass appropriate question Id to get response.</p>
+    </li>
+    <li>
+        <p>Vote for an option (PATCH)</p>
+        <p>https://polling-system-3qu8.onrender.com/api/v1/questions/options/add-vote?oId=64bc067068a3ff6268280cc8</p>
+        <p><i>"oId"</i> corresponds to option Id in above url, Please pass appropriate option Id to get response.</p>
+    </li>
+    <li>
+        <p>Delete an option (DELETE)</p>
+        <p>https://polling-system-3qu8.onrender.com/api/v1/questions/options/delete?oId=64bc067068a3ff6268280cc8</p>
+        <p><i>"oId"</i> corresponds to option Id in above url, Please pass appropriate option Id to get response.</p>
+    </li>
+    <li>
+        <p>Delete a question (DELETE)</p>
+        <p>https://polling-system-3qu8.onrender.com/api/v1/questions/delete?qId=64b83751dbb485bf2bcf3271</p>
+        <p><i>"qId"</i> corresponds to question Id in above url, Please pass appropriate question Id to get response</p>
+    </li>
+    <li>
+        <p>View a question (GET)</p>
+        <p>https://polling-system-3qu8.onrender.com/api/v1/questions/view/64b83751dbb485bf2bcf3271</p>
+        <p>Pass appropriate question Id as params to get response</p>
+    </li>
+   </ol>
+</div>
+
+
